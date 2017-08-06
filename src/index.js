@@ -9,13 +9,8 @@ import {
   Link
 } from 'react-router-dom';
 
+// include everything in main.scss
 import '../styles/main.scss';
-
-// Material Design
-import injectTabEventPlugin from 'react-tap-event-plugin';
-injectTabEventPlugin();
-// Components
-import Home from './components/home';
 
 // Redux
 import { createStore, applyMiddleware, compose } from 'redux';
@@ -31,12 +26,13 @@ import createHistory from 'history/createBrowserHistory'
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux';
 const history = createHistory();
 const middlewareForReduxRouter = routerMiddleware(history);
-
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducers, composeEnhancers(
   applyMiddleware(ReduxThunk, middlewareForReduxRouter, promise)
 ));
+
+// Components
+import Home from './components/home';
 
 ReactDOM.render(
   <Provider store={store}>
