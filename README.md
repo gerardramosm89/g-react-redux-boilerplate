@@ -16,7 +16,7 @@ This boiler plate includestumb
 - redux-promise
 - redux-devtools ready
 
-## Almost every aspect of a scalable React app is here!
+## and scaling your app from here will be easy!
 
 Another thing I REALLY like about how I made this is that.
 
