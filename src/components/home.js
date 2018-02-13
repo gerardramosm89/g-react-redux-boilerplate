@@ -9,7 +9,7 @@ class Home extends Component {
   render() {
     return(
       <div>
-        <h1>Welcome to Gerry's React-Redux Boiler plate!</h1>
+        <h1 style={{margin: 'auto'}}>Welcome to Gerry's React-Redux Boiler plate!</h1>
       </div>
     );
   }
